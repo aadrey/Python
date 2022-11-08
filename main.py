@@ -1,6 +1,6 @@
 from openpyxl import  load_workbook
 
-wb1 = load_workbook('d:\Afonin\Python\Cable\Sheet1\Cable.xlsx')
+wb1 = load_workbook('d:\Работа\Python\Cable.xlsx')
 print(wb1.sheetnames)
 
 sheet1 = wb1 ['Кабельный журнал']
@@ -15,7 +15,7 @@ def raznica_koord (numcell_1,numcell_2):
     raznica = raznica_x + raznica_y
     print('Длина всего ' + numcell_1 + '-' + numcell_2 + ' в строке ' + str(number_str) + ' =', raznica)
     sheet1['H' + str(number_str)] = raznica
-    wb1.save('d:\Afonin\Python\Cable\Sheet1\Cable.xlsx')
+    wb1.save('d:\Работа\Python\Cable.xlsx')
 
 # Цикл по строкам кабельного журнала
 for number_str in range(1,16):
